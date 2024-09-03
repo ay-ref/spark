@@ -83,4 +83,52 @@
     ncat -v
     ```
 
-  - go to jupyter lab
+  - go to jupyter lab and write your streaming codes
+  - go to jupyter container terminal and below commands (run ncat)
+    ```shell
+    ncat -l 4545
+    ```
+  - run `writeStream` in your jupyter code
+  - now you can input to the ncat terminal
+    and see the result in jupyter container logs
+
+## ep 05
+
+- spark streaming output modes
+  - "append" (default)
+    - write just new micro batches and previous micro batches are gone
+    - useful when you don't need previous micro batches in you processing sequence
+  - "complete"
+    - write all of rows updated and not updated
+  - "update"
+    - just write updated rows
+    - not supported by all output sources
+
+## ep 06
+
+- data processing architecture
+  - lambda
+    - seperating the batch processing from the streaming processing
+  - kappa
+    - converting batch data to micro batches for having just one streaming processing
+
+## ep 07
+
+- one of source for spark for real-time processing
+  are files, you can add a new file or write into files in real-time like before
+
+## ep 08
+
+- for seeing the sequence of spark streaming processing you should create a checkpointLocation in config
+  and then it makes some structured files in it
+- files are like below:
+  - commits/
+    - show the outputed micro batches
+      with file number of batch number
+    - in the files you can see the details
+      of batch like input source that used
+      in processing for output batch
+    - commits are very important for fault-tolerance becuase if we remove the
+      last commit the spark goes on from
+      previous last commit and do something
+      again (for example if a file removed and again added with same name spark in natural does not consider that but if you remove the last commit it consider that)

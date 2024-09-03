@@ -1,0 +1,23 @@
+{
+    "eventId": "some343id",
+    "eventOffset": 100,
+    "eventPublisher": "device",
+    "customerId": "c1",
+    "data": {
+        "devices": [
+            {
+                "deviceId": "d1",
+                "temperature": 15,
+                "measure": "c",
+                "status": "error"
+            },
+            {
+                "deviceId": "d2",
+                "temperature": 20,
+                "measure": "d",
+                "status": "success"
+            }
+        ]
+    },
+    "eventTime": "2024-01-01 11:11:11"
+}

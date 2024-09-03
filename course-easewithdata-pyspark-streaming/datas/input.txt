@@ -1,0 +1,1 @@
+this is some text for spark as input to analyze it and does some process like counting the words and other things to done with this file this is very first attempt to learn spark
