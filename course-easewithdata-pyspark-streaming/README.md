@@ -132,3 +132,24 @@
       last commit the spark goes on from
       previous last commit and do something
       again (for example if a file removed and again added with same name spark in natural does not consider that but if you remove the last commit it consider that)
+
+## ep 09
+
+- kafka
+  - kafka is distributed queue
+  - optimized for big data writing
+  - bootstrap server
+    - handling kafka brokers
+    - ex: zookeeper
+  - topic
+    - is like a link or communication
+  - partition
+    - topic are paralleled in partiotions
+    - algorithms is fifo
+    - producer/consumer can write/read from partitions parallelized
+  - offset of the reading point of partitioned store in bootstrap server
+  - replication
+    - replication in distributing systems means repeating a copy of data
+      for reliability, availability and performance
+    - in kafka for replication we make a broker as leader and other as follower
+    - when we write in leader, it writes in its followers
