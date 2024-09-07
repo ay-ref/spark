@@ -4,7 +4,7 @@
 
 ### formats
 
-> in `json` files you should consider about the f\*\*king `lf/crlf`, recommended to convert your nested json to flatened json or add `multiLine=True` like `read.json('path', multiLine=True)`!
+> in `json` files you should consider about the `lf/crlf`, recommended to convert your nested json to flatened json or add `multiLine=True` like `read.json('path', multiLine=True)`!
 
 - in json format explode function explode it just for one layer
 
